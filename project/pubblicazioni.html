@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articoli | Piancolombo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-image: url('/images/background_rustico.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #4b3621;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255,248,235,0.85);
+      z-index: -1;
+    }
+
+    .header {
+      padding: 15px 25px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo { height: 150px; }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color:red;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: greenyellow; }
+
+    .articles-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .article {
+      background: #fff;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .article img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
+
+    .article-content {
+      padding: 20px;
+    }
+
+    .article-content h2 {
+      color: #7c501b;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .article-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .footer {
+      background: #7c501b;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <img src="/images/logo.png" alt="Piancolombo" class="logo">
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+
+    <li><a href="storiaefilosofia.html">La nostra storia e filosofia</a></li>
+    <li><a href="filiera.html">Filiera</a></li>
+    <li><a href="valori.html">Valori</a></li>
+    <li><a href="prodotto.html">Prodotti</a></li>
+    <li><a href="dovetrovarci.html">Dove Trovarci</a></li>
+    <li><a href="index.html#contattaci">Contatti</a></li>
+    <li><a href="newsletter.html">Newsletter</a></li>
+  </ul>
+</header>
+
+<main class="articles-container">
+  <div class="article">
+    <img src="/images/gianni.jpeg" alt="Campo di grano">
+    <div class="article-content">
+      <h2>Dal Grano alla Farina</h2>
+      <p>Scopri il percorso che il nostro grano compie dalla semina alla macinazione. Utilizziamo solo sementi biologiche certificate e metodi naturali per coltivare la materia prima che diventerà farina sana e nutriente per la tua tavola.</p>
+    </div>
+  </div>
+
+  <div class="article">
+    <img src="/images/farina12.jpeg" alt="Panificazione artigianale">
+    <div class="article-content">
+      <h2>Pasta fatto in casa: tradizione che profuma</h2>
+      <p>La pasta artigianalae non è solo un alimento, ma un gesto d'amore. Con le nostre farine puoi riscoprire la bontà della pasta di una volta, croccante fuori e morbida dentro, perfetto per accompagnare il pasto con gusto e salute.</p>
+    </div>
+  </div>
+
+  <div class="article">
+    <img src="/images/farina9.jpeg" alt="Famiglia a tavola">
+    <div class="article-content">
+      <h2>Piaceri Sani per Tutta la Famiglia</h2>
+      <p>La nostra missione è portare sulla tua tavola un prodotto che sia buono, sano e rispettoso dell'ambiente. Le nostre farine biologiche sono ideali per ogni preparazione, dalla pasta fatta in casa alle dolci merende per i più piccoli.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2025 Piancolombo - Tutti i diritti riservati</p>
+  <span>Made by Damiano Dell'Amore</span>
+</footer>
+
+</body>
+</html>

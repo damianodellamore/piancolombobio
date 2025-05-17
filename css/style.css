@@ -1,0 +1,595 @@
+/****************************************
+  RESET & BASE STYLES
+****************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: #f7f2eb;
+    color: #4b3621;
+    font-family: 'Crimson Text', serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /****************************************
+    HEADER & NAV
+  ****************************************/
+  /****************************************
+  HEADER & NAV - VERSIONE MIGLIORATA
+****************************************/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    /* Gradiente più elegante e scuro */
+    background: linear-gradient(45deg, #ffffff 0%, #ffffff 100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+  }
+  
+  .logo {
+    height: 150px; /* un po' più ridotta rispetto a 150px */
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Container per la navbar e l'icona hamburger (mobile) */
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Navbar di default su desktop */
+  .navbar {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+  }
+  
+  .nav-links li a {
+    color: #e92525;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    transform: scale(1.1);
+    color: greenyellow
+  }
+  
+  /****************************************
+    ICONA MENU (HAMBURGER) - MOBILE
+  ****************************************/
+  .menu-icon {
+    display: none; 
+    font-size: 2rem;
+    color: #000000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-icon:hover {
+    transform: scale(1.15);
+  }
+  
+  /****************************************
+    MEDIA QUERIES
+  ****************************************/
+  @media screen and (max-width: 768px) {
+  
+    /* Riduciamo leggermente il padding dell'header su mobile */
+    .header {
+      padding: 10px 15px;
+    }
+  
+    .logo {
+      height: 90px; 
+    }
+  
+    /* Mostriamo l'icona hamburger e nascondiamo la navbar di default */
+    .navbar {
+      display: none; /* inizialmente nascosta su mobile */
+      position: absolute;
+      top: 100px; /* subito sotto l'header */
+      right: 15px;
+      background: linear-gradient(45deg, #ffffff 0%, #ffffff 100%);
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      z-index: 999;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    /* Quando la navbar ha una classe "active", la mostriamo */
+    .navbar.active {
+      display: flex;
+    }
+  }
+  /****************************************
+    HERO SLIDER
+  ****************************************/
+  .hero-slider {
+
+    position: relative;
+    max-width: 100%;
+    height: 60vh;
+    overflow: hidden;
+  }
+  
+  .hero-slide {
+    display: none; /* Nascondo tutte le slide di default */
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hero-slide img {
+ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+  }
+  
+  .hero-slide-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    max-width: 90%;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .hero-slide-caption h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-family: 'Crimson Text', serif;
+  }
+  
+  .hero-slide-caption p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-slide-caption .btn {
+    padding: 12px 40px;
+    background: linear-gradient(to right, #8c542b, #6a3c21);
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+  }
+  
+  .hero-slide-caption .btn:hover {
+    background: linear-gradient(to right, #6a3c21, #8c542b);
+    transform: scale(1.08);
+  }
+  
+  /* Frecce di navigazione del hero slider */
+  .hero-prev,
+  .hero-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 50%;
+    transition: background 0.3s;
+    user-select: none;
+    z-index: 10;
+  }
+  
+  .hero-prev:hover,
+  .hero-next:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .hero-prev {
+    left: 20px;
+  }
+  
+  .hero-next {
+    right: 20px;
+  }
+  
+  /* Effetto fade */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.2s;
+  }
+  @keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+  }
+  
+  /****************************************
+    SECTION TITLES
+  ****************************************/
+  section h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Crimson Text', serif;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 1s ease, opacity 1s ease;
+    color: #ffffff;
+  }
+  
+  /****************************************
+    VALUES
+  ****************************************/
+  .values {
+    background: url('/images/farina2.jpeg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+  }
+  
+  .values::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+  }
+  
+  .value-cards {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 270px;
+    height: 220px;
+    border: 1px solid #8c542b;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    backdrop-filter: blur(5px);
+  }
+  
+  .card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+  
+  .card p {
+    font-size: 1.05rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    line-height: 1.4;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /****************************************
+    PRODUCTS
+  ****************************************/
+/* Sezione Prodotti */
+.products {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #0d8ac9, #ffe2c4); 
+  /* Puoi cambiare questo sfondo */
+}
+
+/* Titolo della sezione */
+.products h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-family: 'Crimson Text', serif;
+  color: #4b3621;
+}
+
+/* Wrapper per slider + frecce */
+.slider-wrapper {
+  position: relative; /* per posizionare frecce in absolute */
+  overflow: hidden;   /* nascondi le card fuori area */
+  max-width: 100%;  /* o 100%, come preferisci */
+  margin: 0 auto;     /* centri se vuoi */
+  /* se vuoi un po' di margine in alto/basso:
+     margin: 40px auto;
+  */
+}
+
+/* Container che scorre orizzontalmente */
+.product-slider {
+  display: flex;
+  gap: 20px;
+  scroll-behavior: smooth;
+ 
+     overflow-x: hidden;
+
+  
+  padding: 20px 0; /* spazio verticale intorno alle card */
+}
+
+/* Card più grandi */
+.product-slide {
+  flex: 0 0 auto;        /* si allineano in orizzontale */
+  width: 400px;          /* larghezza card */
+  min-height: 150px;     /* altezza minima */
+  background: #ffffff;   /* sfondo base */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #8c542b;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Immagine responsive */
+.product-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Testo descrizione */
+.product-slide p {
+  color: #4b3621;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Hover card (opzionale) */
+.product-slide:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* PULSANTI DI NAVIGAZIONE (freccia prev/next) */
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 99; /* cosi' restano sopra le card */
+  font-size: 1.5rem; /* dimensione testo freccia */
+}
+
+/* Hover sulle frecce */
+.slider-nav:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Posizionamento */
+.slider-prev {
+  left: 10px;
+}
+
+.slider-next {
+  right: 10px;
+}
+
+  /****************************************
+    STORE LOCATOR
+  ****************************************/
+  .store-locator {
+    padding: 70px 20px;
+    background: linear-gradient(to bottom, #ffe0c3, #f99e3c);
+    border-top: 3px solid #8c542b;
+    border-bottom: 3px solid #8c542b;
+    text-align: center;
+    position: relative;
+  }
+  
+  #map {
+    width: 100%;
+    height: 450px;
+    background: #c7b298;
+    border: 2px solid #8c542b;
+    border-radius: 10px;
+    margin-top: 20px;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #map h3 {
+    color: #ffffff;
+    text-align: center;
+    padding: 0 10px;
+    font-size: 2rem;
+  }
+  .contact {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 60px 20px;
+    text-align: center;
+   
+   justify-content: space-around;
+   align-items: center;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+    
+  }
+  
+  .contact h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #6f4819;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #f4e3c1;
+  }
+  
+  .contact p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #4b3621;
+    line-height: 1.6;
+    font-weight: bold;
+  }
+  
+  .contact a {
+    color: #7c501b;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contact a:hover {
+    color: green;
+  }
+  
+  .contact .cta-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 28px;
+    background: linear-gradient(45deg, #7c501b, #a86b2d);
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  .contact .cta-button:hover {
+    background: linear-gradient(45deg, #a86b2d, #7c501b);
+    transform: scale(1.05);
+  }
+  
+  #blur{
+margin: auto;
+  filter:contrast(8)
+  }
+  /****************************************
+    FOOTER
+  ****************************************/
+  .footer {
+background-color: white;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .footer p {
+    font-size: 1.1rem;
+    color: #fefcfb;
+    margin: 0;
+  }
+  
+  #created_by {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  /****************************************
+    ANIMATIONS CLASSES
+  ****************************************/
+  .fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  .fade-in-scale {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+  }
+  
+  .fade-in-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  .hero-animate {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+  }
+  
+  .map-animate {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+  }
+  @media screen and (max-width: 600px) {
+    .product-slide {
+      width: 250px; /* o 100% se vuoi card “full width” in orizzontale */
+    }
+  }
+  

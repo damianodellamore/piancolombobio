@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La nostra storia e filosofia | Piancolombo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      color: #4b3621;
+      overflow-x: hidden;
+    }
+    
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #eacda3, #d6ae7b, #b0845b, #eacda3);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {font-weight: bold;
+      text-align: center;
+      font-family: 'Crimson Text', serif;
+      font-size: 3rem;
+      color: #8c542b;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+  /****************************************
+    FOOTER
+  ****************************************/
+  .footer {
+    background: linear-gradient(to right, #4b2f08, #8c542b);
+    color: #faf3e0;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .footer p {
+    font-size: 1.1rem;
+    color: #fefcfb;
+    margin: 0;
+  }
+  
+  #created_by {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  
+  </style>
+</head>
+<body>
+
+<div class="animated-bg"></div>
+
+<header class="header">
+  <div class="logo-container">
+    <img src="/images/logo.png" alt="Logo Piancolombo" class="logo">
+  </div>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pubblicazioni.html">Pubblicazioni</a></li>
+      <li><a href="filiera.html">Filiera</a></li>
+      <li><a href="valori.html">Valori</a></li>
+      <li><a href="prodotto.html">Valori</a></li>
+      <li><a href="dovetrovarci.html">Dove Trovarci</a></li>
+      <li><a href="index.html#contact">Contatti</a></li>
+      <li><a href="newsletter.html">Newsletter</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>La nostra storia e filosofia</h1>
+
+  <div class="image-container">
+    <img  width="300" height="300" src="/images/bg5.jpeg" alt="Gianni, il nostro agricoltore">
+    <img  width="300" height="300"  src="/images/hero1.jpeg" alt="Mietitrebbia">
+  </div>
+
+  <p>
+    L’azienda agricola Piancolombo prende il nome dal podere che ha dato origine al progetto, nato con la volontà di tutelare la filiera e i valori autentici che la globalizzazione minaccia di cancellare.
+  </p>
+
+  <p>
+    Salute e natura sono al primo posto, ispirate dall'etica condivisa tra zio e nipote e da un sogno comune: scegliere una vita dedicata alla protezione e valorizzazione del proprio territorio, svolgendo il mestiere più bello del mondo, l’agricoltore.
+  </p>
+
+  <p>
+    Crediamo che il metodo biologico sia fondamentale per ripristinare il benessere alimentare. Non si tratta semplicemente di avere cibo, ma di sapere da dove proviene, come viene coltivato e nutrito ciò che consumiamo. Il nostro obiettivo è liberare i consumatori dalla preoccupazione di scegliere tra alimenti dannosi e cibi sani e nutrienti.
+  </p>
+
+  <p>
+    La figura dell’agricoltore oggi spesso è fraintesa, ma per noi che nutriamo una passione indescrivibile per la terra, questa percezione negativa è dolorosa. L’agricoltura è vulnerabile, le sue certezze possono essere spazzate via da eventi imprevedibili come una grandinata. "Porta rispetto e sarai rispettato" è il nostro motto, applicato a ogni aspetto della nostra attività e della natura che ci circonda.
+  </p>
+
+  <p>
+    La nostra azienda si estende nella valle del Savio, scelta strategicamente per ridurre rischi e garantire terreni ideali per ogni coltivazione, lontani da contaminazioni chimiche. Nutriamo i nostri campi esclusivamente con letami naturali e microorganismi benefici, favorendo così la riattivazione degli ecosistemi e garantendo prodotti naturali e genuini.
+  </p>
+</div>
+
+<footer class="footer">
+  &copy; 2025 Piancolombo - Tutti i diritti riservati <br>
+  Made by Damiano Dell'Amore
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Nostri Prodotti | Piancolombo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-image: url('/images/background_rustico.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #4b3621;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(255,248,235,0.85);
+      z-index: -1;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background: #fff;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo { height: 80px; }
+
+    .navbar {
+      display: flex;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links a {
+      color: #e92525;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: greenyellow;
+      transform: scale(1.1);
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .title {
+      height: 25vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     margin: 6rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+
+    }
+
+    .gallery-section {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery-item {
+      width: 240px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      position: relative;
+      padding: 10px;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .gallery-item h3 {
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+
+    .tooltip {
+      position: absolute;
+      bottom: 105%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 220px;
+      background: rgba(255,255,255,0.95);
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s;
+      z-index: 10;
+    }
+
+    .gallery-item:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .footer {
+      background: #7c501b;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      }
+
+      .navbar.active {
+        display: flex;
+      }
+
+      .nav-links {
+        flex-direction: column;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      .gallery-item {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <img src="/images/logo.png" class="logo" alt="Logo Piancolombo">
+  <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pubblicazioni.html">Pubblicazioni</a></li>
+      <li><a href="storiaefilosofia.html">La nostra storia e filosofia</a></li>
+      <li><a href="filiera.html">Filiera</a></li>
+      <li><a href="valori.html">Valori</a></li>
+      <li><a href="dovetrovarci.html">Dove Trovarci</a></li>
+      <li><a href="index.html#contact">Contatti</a></li>
+      <li><a href="newsletter.html">Newsletter</a></li>
+    </ul>
+  </nav>
+</header>
+  <div class="title">
+
+
+  <h2>LE NOSTRE FARINE</h2>
+</div>
+  <!-- GALLERY -->
+  <section class="gallery-section">
+  
+    <div class="gallery-container">
+
+      <div class="gallery-item">
+        <img src="/images/farina_integrale.jpeg">
+        <h3>Farina Integrale 100%</h3>
+        <div class="tooltip">
+          <h4>Valori nutrizionali per 100g:</h4>
+          <ul style="list-style: none;">
+            <li><strong>Energia:</strong> 341kcal / 1442kJ</li>
+            <li><strong>Carboidrati:</strong> 67g (zuccheri 1,9g)</li>
+            <li><strong>Grassi:</strong> 2g (saturi 0,3g)</li>
+            <li><strong>Proteine:</strong> 15g</li>
+            <li><strong>Fibre:</strong> 6,8g</li>
+            <li><strong>Sodio:</strong> 0,01g</li>
+          </ul>
+          <p style="font-size:0.8rem;margin-top:8px;">Prodotto e confezionato da:<br>
+          <strong>Molini Briganti di Maldini Manuel s.a.s</strong><br>
+          Via Cesenatico, 358<br>
+          47042 Villalta di Cesenatico (FC)</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="/images/farina00sfoglia.jpeg">
+        <h3>Farina "00" Ideale per Sfoglia</h3>
+        <div class="tooltip">
+          <h4>Valori nutrizionali per 100g:</h4>
+          <ul style="list-style: none;">
+            <li><strong>Energia:</strong> 335kcal / 1485kJ</li>
+            <li><strong>Carboidrati:</strong> 68g (zuccheri 1,7g)</li>
+            <li><strong>Grassi:</strong> 1,2g (saturi 0,3g)</li>
+            <li><strong>Proteine:</strong> 16g</li>
+            <li><strong>Fibre:</strong> 2g</li>
+            <li><strong>Sodio:</strong> 0,01g</li>
+          </ul>
+          <p style="font-size:0.8rem;margin-top:8px;">Prodotto e confezionato da:<br>
+          <strong>Molini Briganti di Maldini Manuel s.a.s</strong><br>
+          Via Cesenatico, 358<br>
+          47042 Villalta di Cesenatico (FC)</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="/images/farina0panepizza.jpeg">
+        <h3>Farina "0" Ideale per Pizza</h3>
+        <div class="tooltip">
+          <h4>Valori nutrizionali per 100g:</h4>
+          <ul style="list-style: none;">
+            <li><strong>Energia:</strong> 344kcal / 1440kJ</li>
+            <li><strong>Carboidrati:</strong> 77g (zuccheri 1,2g)</li>
+            <li><strong>Grassi:</strong> 1,1g (saturi 0,2g)</li>
+            <li><strong>Proteine:</strong> 16,5g</li>
+            <li><strong>Fibre:</strong> 2g</li>
+            <li><strong>Sodio:</strong> 0,01g</li>
+          </ul>
+          <p style="font-size:0.8rem;margin-top:8px;">Prodotto e confezionato da:<br>
+          <strong>Molini Briganti di Maldini Manuel s.a.s</strong><br>
+          Via Cesenatico, 358<br>
+          47042 Villalta di Cesenatico (FC)</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="/images/farinatipo1.jpg">
+        <h3>Farina Tipo 1</h3>
+        <div class="tooltip">
+          <h4>Valori nutrizionali per 100g:</h4>
+          <ul style="list-style: none;">
+            <li><strong>Energia:</strong> 344kcal / 1440kJ</li>
+            <li><strong>Carboidrati:</strong> 77g (zuccheri 1,2g)</li>
+            <li><strong>Grassi:</strong> 1,1g (saturi 0,2g)</li>
+            <li><strong>Proteine:</strong> 15g</li>
+            <li><strong>Fibre:</strong> 5,8g</li>
+            <li><strong>Sodio:</strong> 0,01g</li>
+          </ul>
+          <p style="font-size:0.8rem;margin-top:8px;">Prodotto e confezionato da:<br>
+          <strong>Molini Briganti di Maldini Manuel s.a.s</strong><br>
+          Via Cesenatico, 358<br>
+          47042 Villalta di Cesenatico (FC)</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="/images/farinatipo2.jpeg">
+        <h3>Farina Tipo 2</h3>
+        <div class="tooltip">
+          <h4>Valori nutrizionali per 100g:</h4>
+          <ul style="list-style: none;">
+            <li><strong>Energia:</strong> 344kcal / 1440kJ</li>
+            <li><strong>Carboidrati:</strong> 77g (zuccheri 1,2g)</li>
+            <li><strong>Grassi:</strong> 1,1g (saturi 0,2g)</li>
+            <li><strong>Proteine:</strong> 15g</li>
+            <li><strong>Fibre:</strong> 5,8g</li>
+            <li><strong>Sodio:</strong> 0,01g</li>
+          </ul>
+          <p style="font-size:0.8rem;margin-top:8px;">Prodotto e confezionato da:<br>
+          <strong>Molini Briganti di Maldini Manuel s.a.s</strong><br>
+          Via Cesenatico, 358<br>
+          47042 Villalta di Cesenatico (FC)</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Piancolombo - Tutti i diritti riservati</p>
+    <span>Made by Damiano Dell'Amore</span>
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

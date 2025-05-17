@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Nostri Valori | Piancolombo</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Quicksand:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    .hero-valori {
+      position: relative;
+      overflow: hidden;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+    .hero-valori video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      object-fit: cover;
+    }
+    .hero-valori::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(13, 13, 13, 0.315);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .valori-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      font-family: 'Quicksand', sans-serif;
+      line-height: 1.8;
+      font-size: 1.2rem;
+      color: #4b3621;
+    }
+    .valori-section h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Crimson Text', serif;
+      font-size: 2.5rem;
+      color: #8c542b;
+    }
+    .valori-section p {
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="/images/logo.png" alt="Logo Piancolombo" class="logo" />
+    </div>
+    <div class="navbar-container">
+      <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="storiaefilosofia.html">La nostra storia e filosofia</a></li>
+          <li><a href="filiera.html">Filiera</a></li>
+          <li><a href="prodotto.html">Prodotti</a></li>
+          <li><a href="dovetrovarci.html">Dove Trovarci</a></li>
+          <li><a href="index.html#contact">Contatti</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-valori">
+    <video autoplay loop muted playsinline>
+      <source src="/images/video1.mp4" type="video/mp4">
+      Il tuo browser non supporta il tag video.
+    </video>
+    <div class="hero-content">
+      <h1>I Nostri Valori</h1>
+      <p>Etica, qualità e rispetto per la natura e per le persone</p>
+    </div>
+  </section>
+
+  <!-- SEZIONE VALORI -->
+  <section class="valori-section">
+    <h2>Chi Siamo e in Cosa Crediamo</h2>
+    <p>
+      Piancolombo nasce dall'amore per la terra e dalla volontà di creare prodotti autentici e genuini. Crediamo profondamente che l'agricoltura debba essere rispettosa dell'ambiente e sostenibile nel tempo. I nostri valori sono l'asse portante della nostra attività, dalla scelta delle materie prime al prodotto finito.
+    </p>
+
+    <h2>Etica Bio e Sostenibilità</h2>
+    <p>
+      La sostenibilità per noi è un impegno quotidiano. Lavoriamo nel rispetto della biodiversità, adottando metodi di coltivazione biologica che rispettano i cicli naturali della terra. Crediamo fermamente che proteggere l'ambiente significhi garantire un futuro migliore per tutti.
+    </p>
+
+    <h2>Qualità e Tradizione</h2>
+    <p>
+      Ci impegniamo a mantenere alti standard qualitativi in ogni fase della nostra filiera. La nostra produzione è frutto di un perfetto equilibrio tra innovazione e rispetto per le antiche tradizioni agricole, garantendo così prodotti autentici e di altissima qualità.
+    </p>
+
+    <h2>Family Friendly</h2>
+    <p>
+      Il nostro approccio aziendale pone le famiglie al centro, non solo come destinatari dei nostri prodotti, ma anche come parte integrante della nostra filosofia. Valorizziamo il benessere delle persone e lavoriamo affinché ogni nostro prodotto porti sulle vostre tavole salute, genuinità e amore per la buona tavola.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Piancolombo - Tutti i diritti riservati</p>
+    <span id="created_by">Made by Damiano Dell'Amore</span>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

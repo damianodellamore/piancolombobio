@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piancolombo - Il Gusto del Bio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Quicksand:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Collega il tuo foglio di stile CSS -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="/images/logo.png" alt="Logo Piancolombo" class="logo" />
+    </div>
+    <div class="navbar-container">
+      <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="pubblicazioni.html">Pubblicazioni</a></li>
+          <li><a href="storiaefilosofia.html">La nostra storia e filosofia</a></li>
+          <li><a href="filiera.html">Filiera</a></li>
+          <li><a href="valori.html">Valori</a></li>
+          <li><a href="prodotto.html">Prodotti</a></li>
+          <li><a href="dovetrovarci.html">Dove Trovarci</a></li>
+          <li><a href="#contact">Contatti</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+
+  <!-- HERO SLIDER SECTION -->
+  <section class="hero-slider">
+    <!-- Slide 0 -->
+    <div class="hero-slide fade">
+      <img src="/images/hero.jpg" alt="Hero Foto 1" />
+      <div class="hero-slide-caption">
+        <h1>AZIENDA AGRICOLA PIANCOLOMBO</h1>
+        <p>Etica Bio, Natura, Cibo Sano e Valori</p>
+      </div>
+    </div>
+    
+    <div class="hero-slide fade">
+      <img src="/images/hero1.jpeg" alt="Hero Foto 1" />
+      <div class="hero-slide-caption">
+        <h1>AZIENDA AGRICOLA PIANCOLOMBO</h1>
+        <p>Etica Bio, Natura, Cibo Sano e Valori</p>
+        <a href="#values" class="btn">Scopri di più</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="hero-slide fade">
+      <img src="/images/hero2.jpeg" alt="Hero Foto 2" />
+      <div class="hero-slide-caption">
+        <h1>COLTIVIAMO LA QUALITÀ</h1>
+        <p>Dai campi alla tavola, una filiera completa</p>
+        <a href="#products" class="btn">Vedi Prodotti</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="hero-slide fade">
+      <img src="/images/hero3.jpeg" alt="Hero Foto 3" />
+      <div class="hero-slide-caption">
+        <h1>RISPETTO PER LA TERRA</h1>
+        <p>Tradizione, innovazione e sostenibilità</p>
+        <a href="#contact" class="btn">Contattaci</a>
+      </div>
+    </div>
+
+ 
+    <div class="hero-slide fade">
+      <img src="/images/bg2.jpeg" alt="Hero Foto 1" />
+      <div class="hero-slide-caption">
+        <h1>AZIENDA AGRICOLA PIANCOLOMBO</h1>
+        <p>Etica Bio, Natura, Cibo Sano e Valori</p>
+        <a href="#values" class="btn">Scopri di più</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="hero-slide fade">
+      <img src="/images/bg3.jpeg" alt="Hero Foto 2" />
+      <div class="hero-slide-caption">
+        <h1>COLTIVIAMO LA QUALITÀ</h1>
+        <p>Dai campi alla tavola, una filiera completa</p>
+        <a href="#products" class="btn">Vedi Prodotti</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="hero-slide fade">
+      <img src="/images/bg4.jpeg" alt="Hero Foto 3" />
+      <div class="hero-slide-caption">
+        <h1>RISPETTO PER LA TERRA</h1>
+        <p>Tradizione, innovazione e sostenibilità</p>
+        <a href="#contact" class="btn">Contattaci</a>
+      </div>
+    </div>
+    <div class="hero-slide fade">
+      <img src="/images/bg5.jpeg" alt="Hero Foto 1" />
+      <div class="hero-slide-caption">
+        <h1>AZIENDA AGRICOLA PIANCOLOMBO</h1>
+        <p>Etica Bio, Natura, Cibo Sano e Valori</p>
+      </div>
+    </div>
+    <div class="hero-slide fade">
+      <img src="/images/bg6.jpeg" alt="Hero Foto 1" />
+      <div class="hero-slide-caption">
+        <h1>AZIENDA AGRICOLA PIANCOLOMBO</h1>
+        <p>Etica Bio, Natura, Cibo Sano e Valori</p>
+        <a href="#values" class="btn">Scopri di più</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="hero-slide fade">
+      <img src="/images/bg7.jpeg" alt="Hero Foto 2" />
+      <div class="hero-slide-caption">
+        <h1>COLTIVIAMO LA QUALITÀ</h1>
+        <p>Dai campi alla tavola, una filiera completa</p>
+        <a href="#products" class="btn">Vedi Prodotti</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="hero-slide fade">
+      <img src="/images/bg8.jpeg" alt="Hero Foto 3" />
+      <div class="hero-slide-caption">
+        <h1>RISPETTO PER LA TERRA</h1>
+        <p>Tradizione, innovazione e sostenibilità</p>
+        <a href="#contact" class="btn">Contattaci</a>
+      </div>
+    </div>
+    <!-- Frecce di navigazione -->
+    <a class="hero-prev" onclick="plusHeroSlide(-1)">&#10094;</a>
+    <a class="hero-next" onclick="plusHeroSlide(1)">&#10095;</a>
+  </section>
+
+<!-- VALUES SECTION -->
+<section id="values" class="values">
+  <h2>I Nostri Valori</h2>
+  <div class="value-cards">
+    <a href="valori.html#chi-siamo" class="card">
+      <h3>Chi Siamo</h3>
+      <p>Tradizione e passione per la terra, da generazioni.</p>
+    </a>
+    <a href="valori.html#etica-bio" class="card">
+      <h3>Etica Bio</h3>
+      <p>Impegno per la sostenibilità e il rispetto per la natura.</p>
+    </a>
+    <a href="valori.html#cibo-sano" class="card">
+      <h3>Cibo Sano</h3>
+      <p>Farine di qualità per un'alimentazione sana.</p>
+    </a>
+    <a href="valori.html#family-friendly" class="card">
+      <h3>Family Friendly</h3>
+      <p>Un ambiente che mette al centro le famiglie.</p>
+    </a>
+  </div>
+</section>
+
+
+<!-- PRODUCTS SECTION -->
+<section id="products" class="products">
+  <h2>I Nostri Prodotti</h2>
+
+  <!-- Involucro: wrapper che contiene slider e frecce -->
+  <div class="slider-wrapper">
+    <!-- FRECCE (prev/next) -->
+    <div class="slider-nav slider-prev" onclick="prevProductSlide()">&#10094;</div>
+    <div class="slider-nav slider-next" onclick="nextProductSlide()">&#10095;</div>
+
+    <!-- Container che scorre orizzontalmente le card -->
+    <div class="product-slider">
+      <!-- Esempio di card con immagine e descrizione -->
+      <div class="product-slide">
+        <img src="/images/farina3.jpeg" alt="Farina Integrale" />
+        <p>I nostri terreni</p>
+      </div>
+      <div class="product-slide">
+        <img src="/images/farina4.jpeg" alt="Farina Integrale" />
+        <p>Coltivazioni puramente biologiche</p>
+      </div>
+      <div class="product-slide">
+        <img src="/images/farina5.jpeg" alt="Farina Integrale" />
+        <p>Rispetto per la natura e le tradizioni</p>
+      </div>
+      <div class="product-slide">
+        <img src="/images/farina8.jpeg" alt="Farina Integrale" />
+        <p>Stand itinerante,
+           vendita di farina di altissima qualità</p>
+      </div>
+      <div class="product-slide">
+        <img src="/images/bg3.jpeg" alt="Farina Integrale" />
+        <p>Cucina</p>
+      </div>
+ 
+
+      <!-- Aggiungi altre card se necessario -->
+    </div>
+  </div>
+</section>
+
+<!-- STORE LOCATOR SECTION -->
+<section id="store-locator" class="store-locator">
+  <h2>Dove Trovarci</h2>
+  
+  <div class="map-container">
+    <!-- Mappa provvisoria centrata su Ranchio -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5796.255439762818!2d11.97761020210651!3d43.9877672710796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132cc162fa9687cd%3A0x6a4925b22b128b44!2s47010%20Ranchio%2C%20Province%20of%20Forl%C3%AC-Cesena!5e0!3m2!1sit!2sit!4v1692795260297!5m2!1sit!2sit"
+      width="100%"
+      height="600"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+
+
+
+  <section id="contact" class="contact">
+    <img class="logo" src="/images/logo.png" height="250px"
+    width="250px" alt="logo_piancolombo">
+    
+
+    <div style="text-align: center; max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
+      <h2>Contatti</h2>
+      <p>📍 Via Castellina 78/B, Bagno di Romagna (FC)</p>
+      <p>📞 Telefono: <a href="tel:+393420638738" style="color: #7c501b; font-weight: bold;">3420638738</a></p>
+      <p>📧 Email: <a href="mailto:agripiancolombo@gmail.com" style="color: #7c501b;">agripiancolombo@gmail.com</a></p>
+      <a href="tel:+393420638738" style="display:inline-block; margin-top: 20px; padding: 12px 25px; background-color: #7c501b; color: white; border-radius: 5px; text-decoration: none; font-weight: bold;">Chiama Ora</a>
+    </div>
+    <img class="logo" src="/images/logo.png" height="250px"
+    width="250px" alt="logo_piancolombo">
+  </section>
+  
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p style="color:black">&copy; 2025 Piancolombo &copy;</p>
+    <span id="created_by">Made by</span>
+    <img id="blur" class="logo" src="/images/damianodellamore_logo.png" height="50px"
+    width="250px" alt="damiano_dellamore">
+
+  </footer>
+  
+
+  <!-- Collega il file JS -->
+  <script src="/js/main.js"></script>
+</body>
+</html>
