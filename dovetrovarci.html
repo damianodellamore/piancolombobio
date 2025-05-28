@@ -25,6 +25,13 @@
       box-shadow: 0 5px 10px rgba(0,0,0,0.2);
       margin-bottom: 40px;
     }
+    .footer {
+      background: #7c501b;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+    }
   </style>
 </head>
 <body>
@@ -32,21 +39,25 @@
   <!-- HEADER -->
   <header class="header">
     <div class="logo-container">
-      <img src="images/logo.png" alt="Logo Piancolombo" class="logo">
+      <img src="images/logo.png" alt="Logo Piancolombo" class="logo" />
     </div>
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pubblicazioni.html">Pubblicazioni</a></li>
-        <li><a href="storiaefilosofia.html">La nostra storia e filosofia</a></li>
-        <li><a href="filiera.html">Filiera</a></li>
-        <li><a href="valori.html">Valori</a></li>
-        <li><a href="prodotto.html">Prodotti</a></li>
-        <li><a href="index.html#contact">Contatti</a></li>
-        <li><a href="newsletter.html">Newsletter</a></li>
-      </ul>
-    </nav>
+    <div class="navbar-container">
+      <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pubblicazioni.html">Pubblicazioni</a></li>
+          <li><a href="storiaefilosofia.html">La nostra storia e filosofia</a></li>
+          <li><a href="filiera.html">Filiera</a></li>
+          <li><a href="valori.html">Valori</a></li>
+          <li><a href="prodotto.html">Prodotti</a></li>
+          <li><a href="index.html#contact">Contatti</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
+  
 
   <!-- Punti Vendita (Ranchio) -->
   <section class="map-section">

@@ -54,6 +54,48 @@
 
     .nav-links a:hover { color: greenyellow; }
 
+
+    .menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+  transform: scale(1.15);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    z-index: 999;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
     .articles-container {
       max-width: 1000px;
       margin: 40px auto;
@@ -101,21 +143,27 @@
 </head>
 <body>
 
-<header class="header">
-  <img src="images/logo.png" alt="Piancolombo" class="logo">
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-
-    <li><a href="storiaefilosofia.html">La nostra storia e filosofia</a></li>
-    <li><a href="filiera.html">Filiera</a></li>
-    <li><a href="valori.html">Valori</a></li>
-    <li><a href="prodotto.html">Prodotti</a></li>
-    <li><a href="dovetrovarci.html">Dove Trovarci</a></li>
-    <li><a href="index.html#contattaci">Contatti</a></li>
-    <li><a href="newsletter.html">Newsletter</a></li>
-  </ul>
-</header>
-
+  <header class="header">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Logo Piancolombo" class="logo" />
+    </div>
+    <div class="navbar-container">
+      <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="storiaefilosofia.html">La nostra storia e filosofia</a></li>
+          <li><a href="filiera.html">Filiera</a></li>
+          <li><a href="valori.html">Valori</a></li>
+          <li><a href="prodotto.html">Prodotti</a></li>
+          <li><a href="dovetrovarci.html">Dove Trovarci</a></li>
+          <li><a href="index.html#contact">Contatti</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
 <main class="articles-container">
   <div class="article">
     <img src="images/gianni.jpeg" alt="Campo di grano">
@@ -146,6 +194,12 @@
   <p>&copy; 2025 Piancolombo - Tutti i diritti riservati</p>
   <span>Made by Damiano Dell'Amore</span>
 </footer>
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('.navbar');
+    nav.classList.toggle('active');
+  }
+</script>
 
 </body>
 </html>

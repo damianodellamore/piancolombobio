@@ -61,12 +61,15 @@
     }
 
     .image-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 30px;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
 
     .image-container img {
       width: 100%;
@@ -97,7 +100,18 @@
     font-size: 0.9rem;
     margin-top: 5px;
   }
-  
+  @media screen and (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-container img {
+    max-width: 90%;
+    height: auto;
+  }
+}
+
   
   </style>
 </head>
@@ -107,20 +121,23 @@
 
 <header class="header">
   <div class="logo-container">
-    <img src="images/logo.png" alt="Logo Piancolombo" class="logo">
+    <img src="images/logo.png" alt="Logo Piancolombo" class="logo" />
   </div>
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="pubblicazioni.html">Pubblicazioni</a></li>
-      <li><a href="filiera.html">Filiera</a></li>
-      <li><a href="valori.html">Valori</a></li>
-      <li><a href="prodotto.html">Valori</a></li>
-      <li><a href="dovetrovarci.html">Dove Trovarci</a></li>
-      <li><a href="index.html#contact">Contatti</a></li>
-      <li><a href="newsletter.html">Newsletter</a></li>
-    </ul>
-  </nav>
+  <div class="navbar-container">
+    <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pubblicazioni.html">Pubblicazioni</a></li>
+        <li><a href="filiera.html">Filiera</a></li>
+        <li><a href="valori.html">Valori</a></li>
+        <li><a href="prodotto.html">Prodotti</a></li>
+        <li><a href="dovetrovarci.html">Dove Trovarci</a></li>
+        <li><a href="index.html#contact">Contatti</a></li>
+        <li><a href="newsletter.html">Newsletter</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <div class="container">
@@ -156,6 +173,14 @@
   &copy; 2025 Piancolombo - Tutti i diritti riservati <br>
   Made by Damiano Dell'Amore
 </footer>
+
+
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('.navbar');
+    nav.classList.toggle('active');
+  }
+</script>
 
 </body>
 </html>
