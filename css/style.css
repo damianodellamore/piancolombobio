@@ -265,7 +265,7 @@
     VALUES
   ****************************************/
   .values {
-    background: url('/images/farina2.jpeg') center no-repeat;
+    background: url('images/farina2.jpeg') center no-repeat !important;
     background-size: cover;
     background-attachment: fixed;
     padding: 80px 20px;
